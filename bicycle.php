@@ -2,34 +2,12 @@
 
 // Bicycle.php
 
-class Bicycle
-{
-    public string $color;
-    public int $currentSpeed;
-    public int $nbSeats = 1;
-    public int $nbWheels = 2;
+require_once 'Vehicle.php';
 
-    public function forward(): string
+class Bicycle extends Vehicle
 {
-    $this->currentSpeed = 15;
 
-    return "Go !";
-}
-public function dump()
-{
-    var_dump($this);
 }
 
-public function brake(): string
-{
-   $sentence = "";
-   while ($this->currentSpeed > 0) {
-       $this->currentSpeed--;
-       $sentence .= "Brake !!!";
-   }
-   $sentence .= "I'm stopped !";
-   return $sentence;
-}
-}
 
 ?>
