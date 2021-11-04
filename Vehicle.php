@@ -4,7 +4,7 @@
 
 class Vehicle
 {
- 
+
     protected string $color;
 
     public int $currentSpeed;
@@ -77,5 +77,41 @@ class Vehicle
     public function setNbWheels(int $nbWheels): void
     {
         $this->nbWheels = $nbWheels;
+    }
+
+    abstract class HighWay
+    {
+        abstract public array $currentVehicules;
+        abstract public int $nbLane;
+        abstract public int $maxSpeed;
+
+        public function getCurrentVehicules(): array
+        {
+            return $this->$currentVehicules;
+        }
+        public function getNbLane(); int
+        {
+            return $this->$nbLane;
+        }
+        public function getMaxSpeed(): int
+        {
+            return $this->$maxSpeed;
+        }
+        final class MotorWay
+        {
+            return $this->$nbLane = 4;
+            return $this->$maxSpeed = 130;
+        }
+        final class PedestrianWay
+        {
+            return $this->$nbLane = 1;
+            return $this->$maxSpeed = 10;
+        }
+        final class ResidentialWay
+        {
+            return $this->$nbLane = 2;
+            return $this->$maxSpeed = 50;
+        }
+        abstract class addVehicle()
     }
 }
